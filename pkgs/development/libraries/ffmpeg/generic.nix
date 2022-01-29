@@ -117,7 +117,6 @@ stdenv.mkDerivation rec {
       "--enable-ffmpeg"
       "--disable-ffplay"
       (ifMinVer "0.6" "--enable-ffprobe")
-      (if reqMin "4" then null else "--disable-ffserver")
     # Libraries
       (ifMinVer "0.6" "--enable-avcodec")
       (ifMinVer "0.6" "--enable-avdevice")
